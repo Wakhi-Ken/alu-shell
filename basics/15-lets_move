@@ -1,0 +1,2 @@
+#!/bin/bash
+mvsrc/*[A-Z]* /tmp/u
