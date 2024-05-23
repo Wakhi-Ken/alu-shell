@@ -1,2 +1,2 @@
 #!/bin/bash
-fin ./* -type d | xargs chmod +111
+find ./* -type d | xargs chmod +111
