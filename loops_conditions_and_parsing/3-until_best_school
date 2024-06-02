@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# will display Best School 10 times
+number=1
+until [ $number -ge 11 ]; do
+  echo "Best School"
+  ((number++))
+done
+
