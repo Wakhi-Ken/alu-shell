@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# will display Best School 10 times
+number=1
+while ((number<=20));do
+ echo "$number"
+case $number in
+  4) echo "bad luck from China"
+      ;;
+  9) echo "bad luck from Japan"
+      ;;
+  17) echo "bad luck from Italy"
+      ;;
+esac
+  ((number++))
+done
