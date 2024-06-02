@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # will display hours and minutes
-number=1
+number=0
 while ((number < 13)); do
   echo "Hour: $number"
   HOUR=1
