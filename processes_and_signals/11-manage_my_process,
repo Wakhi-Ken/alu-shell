@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# starting, stoping and restarting
+NAME="manage_my_process"
+PID_FILE="/var/run/my_process.pid"
+
+if [ "$1" == "start" ]; then
+  nohup $NAME &
+  echo $! > $PID_FILE
+  echo "$NAME started"
+elif [ "$1" == "stop" ]; then
+  if [ -f $PID_FILE ]; then
+    kill $(cat $PID_FILE)
+    rm $PID_FILE
+    echo "$NAME stopped"
+  else
+    echo "$NAME is not running"
+  fi
+elif [ "$1" == "restart" ]; then
+  if [ -f $PID_FILE ]; then
+    kill $(cat $PID_FILE)
+    rm $PID_FILE
+  fi
+  nohup $NAME &
+  echo $! > $PID_FILE
+  echo "$NAME restarted"
+else
+  echo "Usage: $0 {start|stop|restart}"
+  exit 1
+fi
