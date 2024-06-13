@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that displays lines containing the word 'bash but does not us the ps command'
+pgrep -l bash
+
