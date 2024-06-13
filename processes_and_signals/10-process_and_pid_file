@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #Process and PID
 touch /var/run/myscript.pid
 
