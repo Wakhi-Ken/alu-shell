@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A script that displays a list of the currently running processes
-echo "PID     USER         TTY         STAT   TIME      COMMAND"
-ps -eo pid,user,tty,stat,time,command --forest
+echo "USER   PID %CPU %MEM VSZ RSS TTY  STAT  START  TIME  COMMAND"
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
 
 
 
