@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# scrip that displays lines containing the bash
+# shellcheck disable=SC2009
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,time,command --forest | awk '/bash/ {print}'
