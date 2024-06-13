@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#kil command
+#kill command
 trap 'echo "Stopping the script..."; exit' SIGINT
 
 count=0
@@ -9,8 +9,10 @@ while true; do
     sleep 2
     count=$((count + 1))
     if [ $count -eq 6 ]; then
-
-        kill -s SIGTERM $$
+        # Get the process ID of the current script
+        pid=$$
+        # Kill the process with SIGTERM
+        kill -s SIGTERM "$pid"
         exit
     fi
 done
