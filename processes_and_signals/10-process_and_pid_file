@@ -1,4 +1,4 @@
-#!/usr/bin/env  bash
+#!/usr/bin/env bash
 #Process and PID
 touch /var/run/myscript.pid
 trap 'echo "I hate the kill command"; exit' SIGTERM
